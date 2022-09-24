@@ -1,0 +1,92 @@
+/* BODY */
+body{display: flex; flex-direction: column;background-image: url(../media/background.png);}
+footer {align-self: center; margin-top: 20px; color: white;}
+
+/*ELEMENTOS*/
+.space {height: 20px;}
+.space-change {height: 200px;}
+.space2 {height: 600px; align-self: center; margin-left: 5%;}
+.change {width: 100%; height: 200px; background-color: #3cbcfc; border: solid 10px #fff; border-right-style: none; border-left-style: none;}
+.menu {width: 600px; height: 600px;}
+
+table {width: 600px; height: 600px;}
+button { width: 68px; height: 64px; color: transparent; margin-left: 18px; cursor: pointer;}
+
+
+/*MOLDURA E ANIMAÇÃO BLINK*/
+.element {width: 104px; height: 96px; background-image: url(../media/moldura.png); background-repeat: no-repeat;background-size: cover; display: flex; align-items: center;}
+@keyframes moldChange {
+    0% {
+        background-image: url(../media/moldura2.png);
+    }
+    100% {
+        background-image: url(../media/moldura3.png);
+    }
+}
+.blinkMold { width: 104px; height: 96px; background-repeat: no-repeat;background-size: cover; display: flex; align-items: center; animation: moldChange 0.5s infinite;}
+
+/*IMAGENS DAS MOLDURAS*/
+#megaman {background-image: url(../media/robotMasters/megaman.png); background-size: cover;}
+
+.magnet {background-image: url(../media/robotMasters/magnetman.png); background-size: cover;}
+.needle {background-image: url(../media/robotMasters/needleman.png); background-size: cover;}
+.snake {background-image: url(../media/robotMasters/snakeman.png); background-size: cover;}
+.hard {background-image: url(../media/robotMasters/hardman.png); background-size: cover;}
+.top {background-image: url(../media/robotMasters/topman.png); background-size: cover;}
+.gemini {background-image: url(../media/robotMasters/geminiman.png); background-size: cover;}
+.spark {background-image: url(../media/robotMasters/sparkman.png); background-size: cover;}
+.shadow {background-image: url(../media/robotMasters/shadowman.png); background-size: cover;}
+/*.moldura {background-image: url(../media/moldura.png);}*/
+
+/*NOME MENU*/
+.nome {width: 104px; height: 32px;}
+.nomeBreak {width: 104px; height: 32px; background-image: url(../media/break.png); background-repeat: no-repeat;}
+.nomeSpark {width: 104px; height: 32px; background-image: url(../media/spark.png); background-repeat: no-repeat;}
+.nomeNeedle {width: 104px; height: 32px; background-image: url(../media/needle.png); background-repeat: no-repeat;}
+.nomeSnake {width: 104px; height: 32px; background-image: url(../media/snake.png); background-repeat: no-repeat;}
+.nomeHard {width: 104px; height: 32px; background-image: url(../media/hard.png); background-repeat: no-repeat;}
+.nomeTop {width: 104px; height: 32px; background-image: url(../media/topman.png); background-repeat: no-repeat;}
+.nomeGemini {width: 104px; height: 32px; background-image: url(../media/gemini.png); background-repeat: no-repeat;}
+.nomeMagnet {width: 104px; height: 32px; background-image: url(../media/magnet.png); background-repeat: no-repeat;}
+.nomeShadow {width: 104px; height: 32px; background-image: url(../media/shadow.png); background-repeat: no-repeat;}
+
+/*NOME*/
+.sparkTitle {margin-left: 43%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/spark.png); background-repeat: no-repeat;}
+.needleTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/needle.png); background-repeat: no-repeat;}
+.snakeTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/snake.png); background-repeat: no-repeat;}
+.hardTitle {margin-left: 43%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/hard.png); background-repeat: no-repeat;}
+.topmanTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/topman.png); background-repeat: no-repeat;}
+.geminiTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/gemini.png); background-repeat: no-repeat;}
+.magnetTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/magnet.png); background-repeat: no-repeat;}
+.shadowTitle {margin-left: 42%; margin-top: 10px; width:200px; height: 30px; background-image: url(../media/names/shadow.png); background-repeat: no-repeat;}
+
+
+
+/*ANIMAÇÕES GIF*/
+.sparkSprite {margin-left: 45%; width: 110px; height: 110px;}
+.needleSprite {margin-left: 45%; margin-top: 20px; width: 80px; height: 80px;}
+.snakeSprite {margin-left: 46%; margin-top: 20px; width: 70px; height: 70px;}
+.hardSprite {margin-left: 46%; margin-top: 20px; width: 80px; height: 80px;}
+.topmanSprite {margin-left: 45%; margin-top: 20px; width: 68px; height: 68px;}
+.geminiSprite {margin-left: 45%; margin-top: 20px; width: 70px; height: 70px;}
+.magnetSprite {margin-left: 45%; margin-top: 20px; width: 70px; height: 70px;}
+.shadowSprite {margin-left: 45%; margin-top: 20px; width: 70px; height: 70px;}
+
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+    table {width: 380px; height: 380px;}
+    .menu {width: 380px; height: 380px; margin-left: 5%; margin-top: 35%;}
+    .space2 {height: 400px; align-self: center;}
+
+    /*ANIMAÇÕES GIF*/
+    .sparkSprite {margin-left: 35%; width: 110px; height: 110px;}
+    .needleSprite {margin-left: 38%; margin-top: 20px; width: 80px; height: 80px;}
+    .snakeSprite {margin-left: 40%; margin-top: 20px; width: 70px; height: 70px;}
+    .hardSprite {margin-left: 38%; margin-top: 20px; width: 80px; height: 80px;}
+    .topmanSprite {margin-left: 40%; margin-top: 20px; width: 70px; height: 70px;}
+    .geminiSprite {margin-left: 40%; margin-top: 20px; width: 70px; height: 70px;}
+    .magnetSprite {margin-left: 40%; margin-top: 20px; width: 70px; height: 70px;}
+    .shadowSprite {margin-left: 40%; margin-top: 20px; width: 70px; height: 70px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px;) {}
+@media only screen and (min-width: 1024px) {}

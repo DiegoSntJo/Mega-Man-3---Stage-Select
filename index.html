@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Man 3 - Select Screen</title>
+    <link rel="icon" href="media/fav.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="space" class="space"></div>
+    <div id="space2" class="space2">
+        <div id="menu" class="menu">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="moldura"><div id="blinkSpark" class="element"><button id="spark" class="spark" onclick="escolheu(master = spark)">spark</button></div><br><div class="nomeSpark"></div></td>
+                        <td class="moldura"><div id="blinkNeedle" class="element"><button id="needle" class="needle" onclick="escolheu(master = needle)">needle</button></div><br><div class="nomeNeedle"></div></td>
+                        <td class="moldura"><div id="blinkSnake" class="element"><button id="snake" class="snake" onclick="escolheu(master = snake)">snake</button></div><br><div class="nomeSnake"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="moldura"><div id="blinkHard" class="element"><button id="hard" class="hard" onclick="escolheu(master = hard)">hard</button></div><br><div class="nomeHard"></div></td>
+                        <td class="moldura"><div id="blinkMm" class="element"><button id="megaman" class="megaman" onclick="escolheu()">B</button></div><br><div class="nome"></div></td>
+                        <td class="moldura"><div id="blinkTop" class="element"><button id="top" class="top" onclick="escolheu(master = topman)">topman</button></div><br><div class="nomeTop"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="moldura"><div id="blinkGemini" class="element"><button id="gemini" class="gemini" onclick="escolheu(master = gemini)">gemini</button></div><br><div class="nomeGemini"></div></td>
+                        <td class="moldura"><div id="blinkMagnet" class="element"><button id="magnet" class="magnet" onclick="escolheu(master = magnet)">magnet</button></div><br><div class="nomeMagnet"></div></td>
+                        <td class="moldura"><div id="blinkShadow" class="element"><button id="shadow" class="shadow" onclick="escolheu(master = shadow)">shadow</button></div><br><div class="nomeShadow"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="theme">
+        <audio autoplay loop><source src="media/sfx/Select Screen.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div id="sfx"></div>
+    
+    <!--RODAPÉ-->
+    <footer>
+        <div class="rodape">
+            <p>Todos os direitos reservados à Capcom ©</p>
+        </div>
+    </footer>
+</body>
+<!-- JAVASCRIPT -->
+<script  src="JS/script.js"></script>
+</html>
