@@ -12,6 +12,19 @@ footer {align-self: center; margin-top: 20px; color: white;}
 table {width: 600px; height: 600px;}
 button { width: 68px; height: 64px; color: transparent; margin-left: 18px; cursor: pointer;}
 
+/* BOTÃO DE CONTROLE DE MÚSICA */
+#musicToggle { width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.7); border: 2px solid #fff; border-radius: 5px; color: white; font-size: 20px; cursor: pointer; margin: 10px; margin-left: auto; margin-right: 20px; margin-top: 10px; margin-bottom: auto; transition: all 0.3s ease;}
+#musicToggle:hover { background-color: rgba(60, 188, 252, 0.8); transform: scale(1.1);}
+#musicToggle.muted { opacity: 0.5; background-color: rgba(150, 0, 0, 0.7);}
+
+/* BOTÃO DE RESET */
+#resetButton { width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.7); border: 2px solid #fff; border-radius: 5px; color: white; font-size: 20px; cursor: pointer; margin: 10px; margin-left: 10px; margin-right: 20px; margin-top: 10px; margin-bottom: auto; transition: all 0.3s ease;}
+#resetButton:hover { background-color: rgba(60, 188, 252, 0.8); transform: scale(1.1);}
+
+@media only screen and (max-width: 767px) {
+    #musicToggle { width: 35px; height: 35px; font-size: 18px; margin: 8px;}
+}
+
 
 /*MOLDURA E ANIMAÇÃO BLINK*/
 .element {width: 104px; height: 96px; background-image: url(../media/moldura.png); background-repeat: no-repeat;background-size: cover; display: flex; align-items: center;}

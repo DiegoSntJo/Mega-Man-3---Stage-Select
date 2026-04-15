@@ -1,3 +1,31 @@
+// CONTROLE DE MÚSICA
+var themeMusic = document.getElementById("themeMusic");
+var musicToggle = document.getElementById("musicToggle");
+var isMusicPlaying = false;
+
+// Evento do botão de controle
+musicToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (isMusicPlaying) {
+        themeMusic.pause();
+        musicToggle.textContent = "🔇";
+        musicToggle.classList.add("muted");
+        isMusicPlaying = false;
+    } else {
+        themeMusic.play();
+        musicToggle.textContent = "🔊";
+        musicToggle.classList.remove("muted");
+        isMusicPlaying = true;
+    }
+});
+
+// Definir botão como muted na inicialização
+window.addEventListener("load", function() {
+    musicToggle.textContent = "🔇";
+    musicToggle.classList.add("muted");
+    isMusicPlaying = false;
+});
+
 var megaman = document.getElementById("megaman");
 
 var magnet = document.getElementById("magnet");
@@ -180,9 +208,43 @@ shadowman.addEventListener("mouseleave", function(){
 //SELECIONOU ROBOT MASTER
 function charEscolhido(){
     var tocar = document.getElementById("theme");
-    tocar.innerHTML = "<audio autoplay id='audio'><source src='media/themes/"+master.innerHTML+".mp3' type='audio/mpeg'></audio>";
+    tocar.innerHTML = "<audio id='audio'><source src='media/themes/"+master.innerHTML+".mp3' type='audio/mpeg'></audio><button id=\"musicToggle\" title=\"Alternar Música\">🔊</button><button id=\"resetButton\" title=\"Recarregar Página\">🔄</button>";
     var audio = document.getElementById("audio");
     audio.volume = 0.45;
+    audio.play();
+    
+    // Reattach o evento do botão de música
+    musicToggle = document.getElementById("musicToggle");
+    themeMusic = audio;
+    isMusicPlaying = true;
+    musicToggle.classList.remove("muted");
+    attachMusicToggleEvent();
+    
+    // Evento do botão de reset
+    var resetButton = document.getElementById("resetButton");
+    resetButton.addEventListener("click", function(e) {
+        e.preventDefault();
+        location.reload();
+    });
+}
+
+function attachMusicToggleEvent() {
+    if (musicToggle) {
+        musicToggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            if (isMusicPlaying) {
+                themeMusic.pause();
+                musicToggle.textContent = "🔇";
+                musicToggle.classList.add("muted");
+                isMusicPlaying = false;
+            } else {
+                themeMusic.play();
+                musicToggle.textContent = "🔊";
+                musicToggle.classList.remove("muted");
+                isMusicPlaying = true;
+            }
+        });
+    }
 }
 
 function escolheu (){
@@ -199,6 +261,8 @@ function escolheu (){
     menu.classList.add("change");
     space.classList.add("space-change");
     theme.innerHTML = "" ;
-    sfx.innerHTML = "<audio autoplay id='audio'><source src='media/sfx/Boss Selected.mp3' type='audio/mpeg'></audio>";
+    sfx.innerHTML = "<audio id='audio'><source src='media/sfx/Boss Selected.mp3' type='audio/mpeg'></audio>";
+    var audio = document.getElementById("audio");
+    audio.play();
     setTimeout(charEscolhido, 6000);
 }
